@@ -1,0 +1,10 @@
+\jblock{block problem}
+    Explain why \jvar{wrong_ans}! isn't the total number of \jvar{word | length}-letter arrangements that can be made from the word \jvar{word | upper}. Determine the actual number of \jvar{word | length}-letter arrangements.
+\jblock{endblock}
+
+\jblock{block solution}
+    When a word has multiple instances of the same letter, the number of unique arrangements must account for these letters being interchanged.
+
+    By default, the number of arrangements of an N-letter word are N!. For words with repeated letters, we must divide this result by the number of arrangements of each set of repeated letters.
+    Thus, the answer is $\frac{\jvar{wrong_ans}!}{\jblock{for x in multiples} \jvar{x}! \jblock{endfor}}$.
+\jblock{endblock}

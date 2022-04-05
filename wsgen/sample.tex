@@ -1,0 +1,50 @@
+\documentclass[12pt, twoside]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{tasks}
+\usepackage{fancyhdr}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage[super]{nth}
+\usepackage{enumitem}
+
+\geometry{margin=1in}
+\pagenumbering{gobble}
+\pagestyle{fancy}
+
+\lhead{\jvar{lhead}}
+\chead{\jvar{chead}}
+\rhead{\jvar{rhead}}
+
+\lfoot{\jvar{lfoot}}
+\cfoot{\jvar{cfoot}}
+\rfoot{\jvar{rfoot}}
+
+\everymath{\displaystyle}
+
+\begin{document}
+    \section*{\jvar{title}}
+    \jblock{if render_problems}
+        \begin{enumerate}
+            \jblock{for p in problems}
+                \item \jvar{p}
+            \jblock{endfor}
+        \end{enumerate}
+        \jblock{if render_solutions}
+            \newpage
+        \jblock{endif}
+    \jblock{endif}
+    \jblock{if render_solutions}
+        \section*{Solutions}
+        \begin{enumerate}
+            \jblock{for s in solutions}
+                \item \jvar{s}
+            \jblock{endfor}
+        \end{enumerate}
+    \jblock{endif}
+
+\end{document}

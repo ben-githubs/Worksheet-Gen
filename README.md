@@ -36,11 +36,13 @@ To create new problems, create a subclass of Problem, then add a setup function,
             }
 
 New problems need a text template, and those are written in LateX and enclosed in Jinja blocks. Since LaTeX makes extensive use of burly braces, the default Jinja markers have been replaced:
+
     {% ... %} is now \jblock{ ... }
     {{ ... }} is now \jvar{ ... }
     {# ... #} is now \jcomm{ ... }
 
 With this in mind, the template for our adding problem is
+
     \jblock{block problem}
         What is $\jvar{num1} + \jvar{num2}$?
     \jblock{endblock}
@@ -50,6 +52,7 @@ With this in mind, the template for our adding problem is
     \jblock{endblock}
 
 Finally, to create this worksheet, our main script should look like this:
+
     import wsgen
 
     class AddNumbers(wsgen.Problem):

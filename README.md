@@ -11,10 +11,11 @@ To use locally, follow these steps.
 ## Prerequisites
 Obviously, install Python. Any edition of Python 3 should do.
 The only 3rd-party library used is Jinja2, which can be installed as follows:
+
     pip install Jinja2
 
 ## Installation
-Clone the reposititory, or download the `wsgen` folder. Place it somewhere in your PYTHONPATH, or inside your project directory.
+Clone the reposititory, or download the `wsgen` folder. Place it somewhere in your `PYTHONPATH`, or inside your project directory.
 
 # Usage
 To use `wsgen`, type `import wsgen` at the top of your python file.
